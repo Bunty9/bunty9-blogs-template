@@ -5,9 +5,14 @@ const author = "Bunty9";
 import avatar from "@/public/assets/images/logo.png";
 import DefaultLayout from "@/layouts/default";
 import PostSidebar from "@/components/PostSidebar";
+import { ArticleCard } from "@/components/ArticleCard";
+import { useRef } from "react";
 
 export default function BlogPage() {
     const blog = blogs.find((blog) => blog.id === "vz-bot");
+
+    // Create a ref map for post ids
+    const postRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
     return (
         <DefaultLayout>
@@ -35,7 +40,13 @@ export default function BlogPage() {
                 <div className="flex flex-col md:flex-row gap-8">
                     <div className="flex-1 flex flex-col gap-6">
                         {blog?.posts.map((post) => (
-                            <div id={post.id} key={post.id}>
+                            <div
+                                id={post.id}
+                                key={post.id}
+                                ref={(el) => {
+                                    postRefs.current[post.id] = el;
+                                }}
+                            >
                                 <BlogPostCard
                                     title={post.title}
                                     date={post.date}
@@ -48,8 +59,31 @@ export default function BlogPage() {
                     </div>
 
                     {/* Sidebar */}
-                    <div className="hidden md:block w-64 sticky top-24 h-fit">
-                        {blog && <PostSidebar blog={blog} />}
+                    <div className="hidden md:block w-72 sticky top-24 h-fit">
+                        {blog && (
+                            <PostSidebar blog={blog} postRefs={postRefs} />
+                        )}
+                    </div>
+                </div>
+                {/* Blog Footer */}
+                <div className="flex flex-col py-4 gap-4">
+                    <h1 className="text-lg font-bold">Related Posts</h1>
+                    <div className="flex flex-row flex-wrap gap-4 justify-start items-center">
+                        {blogs &&
+                            blogs
+                                .filter((b) => b.id !== blog?.id)
+                                .slice(0, 2)
+                                .map((b) => (
+                                    <ArticleCard
+                                        key={b.id}
+                                        title={b.title}
+                                        description={b.description}
+                                        category={b.category}
+                                        date={b.date}
+                                        slug={b.slug}
+                                        image={b.image}
+                                    />
+                                ))}
                     </div>
                 </div>
             </div>

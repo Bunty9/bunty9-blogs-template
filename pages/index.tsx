@@ -5,6 +5,8 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
+import { ArticleCard } from "@/components/ArticleCard";
+import BackgroundImage from "@/assets/images/bg.jpg";
 
 export default function IndexPage() {
     return (
@@ -38,6 +40,17 @@ export default function IndexPage() {
                         <GithubIcon size={20} />
                         GitHub
                     </Link>
+                </div>
+
+                <div>
+                    <ArticleCard
+                        title="Advancements in AI-Driven 3D Modeling and Virtual World Creation"
+                        description="Explore how AI is revolutionizing 3D modeling and virtual world creation, enabling users to transform written prompts into immersive experiences."
+                        category="3D Modeling"
+                        date="July 5, 2023"
+                        slug="vz-bot"
+                        image={BackgroundImage}
+                    />
                 </div>
             </section>
         </DefaultLayout>

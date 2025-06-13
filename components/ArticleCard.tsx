@@ -24,9 +24,9 @@ export function ArticleCard({
     return (
         <Link
             href={`/blog/${slug}/`}
-            className="block hover:shadow-lg transition-shadow"
+            className="block border-gray-800 hover:border-purple-500 transition-colors"
         >
-            <Card className="bg-gray-900 border-gray-800 overflow-hidden hover:border-purple-500/50 transition-colors max-w-lg">
+            <Card className="bg-gray-900 overflow-hidden max-w-lg rounded-2xl">
                 <div className="relative h-48">
                     <Image
                         src={image || "/placeholder.svg"}
@@ -36,7 +36,9 @@ export function ArticleCard({
                     />
                 </div>
                 <CardHeader className="flex flex-col justify-start items-start p-4">
-                    <div className={`text-fuchsia-600 flex gap-2 text-sm mb-2`}>
+                    <div
+                        className={`text-fuchsia-600 flex gap-2 text-sm mb-2 items-center`}
+                    >
                         <BrainCircuit className="h-4 w-4" />
                         <span>{category}</span>
                     </div>

@@ -14,10 +14,24 @@ const config = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            h2: {   
+              fontSize: "1rem",
+              fontWeight: "600",
+            },
+            h3: {
+              fontSize: "1.5rem",
+              fontWeight: "500",
+            },
+          },
+        },
+      },
     },
   },
   darkMode: "class",
-  plugins: [heroui()],
+  plugins: [heroui(),require("@tailwindcss/typography")],
 }
 
 export default config;

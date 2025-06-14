@@ -26,7 +26,7 @@ export function ArticleCard({
             href={`/blog/${slug}/`}
             className="block border-gray-800 hover:border-purple-500 transition-colors"
         >
-            <Card className="bg-gray-900 overflow-hidden max-w-lg rounded-2xl">
+            <Card className="bg-background overflow-hidden max-w-lg rounded-2xl">
                 <div className="relative h-48">
                     <Image
                         src={image || "/placeholder.svg"}

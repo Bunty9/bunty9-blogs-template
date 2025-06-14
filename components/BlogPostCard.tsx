@@ -27,7 +27,7 @@ export default function BlogPostCard({
     const classnames = {
         base: "w-full rounded-2xl shadow-lg p-6 max-w-7xl",
         header: "flex flex-row justify-start items-center py-1 my-0 ",
-        body: "w-full max-w-none prose prose-invert dark:prose-invert py-2 my-0",
+        body: "w-full max-w-none prose prose-invert dark:prose-invert text-foreground py-2 my-0 ",
         footer: "flex flex-col items-center gap-2 py-1 my-0",
     };
 

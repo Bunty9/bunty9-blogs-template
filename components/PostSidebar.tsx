@@ -75,7 +75,7 @@ export default function PostSidebar({ blog, postRefs }: PostSidebarProps) {
                         className={`text-left text-sm transition-all duration-250 ${
                             activeId === post.id
                                 ? " text-foreground/90 font-medium pl-2"
-                                : "text-foreground/50 hover:text-foreground/80 hover:font-semibold"
+                                : "text-foreground/50 hover:text-foreground/80 hover:font-normal"
                         }`}
                     >
                         {post.title}

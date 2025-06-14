@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
-import { vzBotPosts } from "./vz-bot";
 import BackgroundImage from "@/assets/images/bg.jpg";
+import { aiBlogPosts } from "./ai-blog";
 
 export interface BlogProps {
     id: string;
@@ -10,63 +10,63 @@ export interface BlogProps {
     date: string;
     slug: string;
     image: StaticImageData;
-    posts: typeof vzBotPosts;
+    posts: typeof aiBlogPosts;
 }
 
 export const blogs: BlogProps[] = [
     {
-        id: "vz-bot",
+        id: "ai-blog",
         title: "Advancements in AI-Driven 3D Modeling and Virtual World Creation",
         description:
             "Explore how AI is revolutionizing 3D modeling and virtual world creation, enabling users to transform written prompts into immersive experiences.",
         category: "3D Modeling",
         date: "July 5, 2023",
-        slug: "vz-bot",
+        slug: "ai-blog",
         image: BackgroundImage,
-        posts: vzBotPosts,
+        posts: aiBlogPosts,
     },
     {
-        id: "vz-bot-2",
+        id: "ai-blog-2",
         title: "Advancements in AI-Driven 3D Modeling and Virtual World Creation",
         description:
             "Explore how AI is revolutionizing 3D modeling and virtual world creation, enabling users to transform written prompts into immersive experiences.",
         category: "3D Modeling",
         date: "July 5, 2023",
-        slug: "vz-bot",
+        slug: "ai-blog",
         image: BackgroundImage,
-        posts: vzBotPosts,
+        posts: aiBlogPosts,
     },
     {
-        id: "vz-bot-3",
+        id: "ai-blog-3",
         title: "Advancements in AI-Driven 3D Modeling and Virtual World Creation",
         description:
             "Explore how AI is revolutionizing 3D modeling and virtual world creation, enabling users to transform written prompts into immersive experiences.",
         category: "3D Modeling",
         date: "July 5, 2023",
-        slug: "vz-bot",
+        slug: "ai-blog",
         image: BackgroundImage,
-        posts: vzBotPosts,
+        posts: aiBlogPosts,
     },
     {
-        id: "vz-bot-4",
+        id: "ai-blog-4",
         title: "Advancements in AI-Driven 3D Modeling and Virtual World Creation",
         description:
             "Explore how AI is revolutionizing 3D modeling and virtual world creation, enabling users to transform written prompts into immersive experiences.",
         category: "3D Modeling",
         date: "July 5, 2023",
-        slug: "vz-bot",
+        slug: "ai-blog",
         image: BackgroundImage,
-        posts: vzBotPosts,
+        posts: aiBlogPosts,
     },
     {
-        id: "vz-bot-5",
+        id: "ai-blog-5",
         title: "Advancements in AI-Driven 3D Modeling and Virtual World Creation",
         description:
             "Explore how AI is revolutionizing 3D modeling and virtual world creation, enabling users to transform written prompts into immersive experiences.",
         category: "3D Modeling",
         date: "July 5, 2023",
-        slug: "vz-bot",
+        slug: "ai-blog",
         image: BackgroundImage,
-        posts: vzBotPosts,
+        posts: aiBlogPosts,
     },
 ];

@@ -9,7 +9,7 @@ import { ArticleCard } from "@/components/ArticleCard";
 import { useRef } from "react";
 
 export default function BlogPage() {
-    const blog = blogs.find((blog) => blog.id === "vz-bot");
+    const blog = blogs.find((blog) => blog.id === "ai-blog");
 
     // Create a ref map for post ids
     const postRefs = useRef<Record<string, HTMLDivElement | null>>({});

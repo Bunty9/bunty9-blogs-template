@@ -10,9 +10,9 @@ interface BlogPost {
     youtubeVideoId?: string;
 }
 
-export const vzBotPosts: BlogPost[] = [
+export const aiBlogPosts: BlogPost[] = [
     {
-        id: "vz-bot-post-001",
+        id: "ai-blog-post-001",
         title: "Advancements in AI-Driven 3D Modeling and Virtual World Creation",
         date: "July 5, 2023",
         content: `
@@ -40,7 +40,7 @@ export const vzBotPosts: BlogPost[] = [
         youtubeVideoId: "cDvBwePeebA",
     },
     {
-        id: "vz-bot-post-002",
+        id: "ai-blog-post-002",
         title: "Advancements in AI-Driven 3D Modeling and Virtual World Creation",
         date: "July 5, 2023",
         content: `
@@ -68,7 +68,7 @@ export const vzBotPosts: BlogPost[] = [
         youtubeVideoId: "cDvBwePeebA",
     },
     {
-        id: "vz-bot-post-003",
+        id: "ai-blog-post-003",
         title: "Advancements in AI-Driven 3D Modeling and Virtual World Creation",
         date: "July 5, 2023",
         content: `
@@ -96,7 +96,7 @@ export const vzBotPosts: BlogPost[] = [
         youtubeVideoId: "cDvBwePeebA",
     },
     {
-        id: "vz-bot-post-004",
+        id: "ai-blog-post-004",
         title: "Advancements in AI-Driven 3D Modeling and Virtual World Creation",
         date: "July 5, 2023",
         content: `
